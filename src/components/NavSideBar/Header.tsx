@@ -7,7 +7,7 @@ type HeaderProps = {
 
 export const Header = ({ onToggle }: HeaderProps) => {
   return (
-    <nav className="flex items-center justify-between w-screen p-2 h-14 md:h-16 bg-slate-50">
+    <nav className="flex items-center justify-between w-screen p-2 h-14 md:h-16 bg-slate-50 grow-0">
       <div className="basis-1/3">
         <button className="p-1 cursor-pointer" onClick={onToggle}>
           <HiMenu className="w-8 h-8 ml-2 fill-cyan-700" />

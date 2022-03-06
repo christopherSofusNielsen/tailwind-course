@@ -9,11 +9,18 @@ export const Page = () => {
   return (
     <div className="flex flex-col w-screen h-screen">
       <Header isOpen={open} onToggle={() => setOpen((state) => !state)} />
-      <div className="flex overflow-auto grow">
+      <div className="flex flex-row items-stretch overflow-hidden grow">
         <SideBar isOpen={open} onClose={() => setOpen(false)} />
-        <div className="w-full overflow-y-auto grow">
-          <div className="w-full min-h-full p-4 bg-slate-200">
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+        <div className="overflow-auto grow">
+          <div className="w-full min-h-full p-4 bg-slate-200">{text}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const text = `
+What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown
             printer took a galley of type and scrambled it to make a type
@@ -54,9 +61,4 @@ export const Page = () => {
             look even slightly believable. If you are going to use a passage of
             Lorem Ipsum, you need to be sure there isn't anything embarrassing
             hidden in the middle of t
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+`;

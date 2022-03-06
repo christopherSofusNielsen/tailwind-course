@@ -9,7 +9,7 @@ export const SideBar = ({ onClose, isOpen }: SideBarProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="absolute top-0 left-0 w-screen h-screen p-2 bg-red-50 sm:relative sm:h-full sm:w-72">
+    <div className="absolute top-0 left-0 w-screen h-screen p-2 bg-red-50 sm:relative sm:h-full sm:w-72 shrink-0">
       <span className="flex justify-end w-full sm:hidden">
         <button onClick={onClose} className=" bg-blue-50">
           <HiOutlineArrowLeft className="w-8 h-8" />
