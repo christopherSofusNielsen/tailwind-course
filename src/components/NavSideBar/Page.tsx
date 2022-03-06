@@ -12,7 +12,7 @@ export const Page = () => {
       <div className="flex overflow-auto grow">
         <SideBar isOpen={open} onClose={() => setOpen(false)} />
         <div className="w-full overflow-y-auto grow">
-          <div className="w-full h-full bg-slate-200">
+          <div className="w-full min-h-full p-4 bg-slate-200">
             What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown
