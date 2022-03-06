@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { Header } from "./navbar/Header";
-import { SideBar } from "./navbar/SideBar";
+import { Header } from "./Header";
+import { SideBar } from "./SideBar";
 
 export const Page = () => {
   const [open, setOpen] = useState(true);
