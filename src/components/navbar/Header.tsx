@@ -1,12 +1,17 @@
 import { HiMenu, HiUserCircle } from "react-icons/hi";
 
-export const Header = () => {
+type HeaderProps = {
+  isOpen: boolean;
+  onToggle: () => void;
+};
+
+export const Header = ({ onToggle }: HeaderProps) => {
   return (
     <nav className="flex items-center justify-between w-screen p-2 h-14 md:h-16 bg-slate-50">
       <div className="basis-1/3">
-        <span className="p-1 cursor-pointer">
+        <button className="p-1 cursor-pointer" onClick={onToggle}>
           <HiMenu className="w-8 h-8 ml-2 fill-cyan-700" />
-        </span>
+        </button>
       </div>
       <div className="text-center basis-1/3">
         <a href="/" className="text-2xl font-semibold text-cyan-700">
@@ -24,8 +29,8 @@ export const Header = () => {
 
 const LoginLink = () => {
   return (
-    <a href="/" className="">
-      <span className="flex items-center h-full p-1 font-semibold rounded md:text-lg text-cyan-700 hover:bg-slate-300 ">
+    <a href="/" className="h-full md:text-lg ">
+      <span className="flex items-center h-full p-1 font-semibold rounded text-cyan-700 hover:bg-slate-300 ">
         Login
         <HiUserCircle className="w-8 h-8 ml-2 fill-cyan-700" />
       </span>
